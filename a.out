@@ -1,0 +1,67 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x11c705840 .scope module, "MC1" "MC1" 2 3;
+ .timescale -12 -12;
+    .port_info 0 /OUTPUT 1 "F";
+    .port_info 1 /INPUT 1 "A";
+    .port_info 2 /INPUT 1 "B";
+    .port_info 3 /INPUT 1 "C";
+    .port_info 4 /INPUT 1 "D";
+o0x120040010 .functor BUFZ 1, C4<z>; HiZ drive
+o0x120040040 .functor BUFZ 1, C4<z>; HiZ drive
+o0x120040070 .functor BUFZ 1, C4<z>; HiZ drive
+o0x1200400a0 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x11c71b8f0 .functor OR 1, o0x120040010, o0x120040040, o0x120040070, o0x1200400a0;
+L_0x11c71c3d0 .functor OR 1, o0x120040010, o0x120040040, o0x120040070, L_0x11c71c550;
+L_0x11c71c550 .functor NOT 1, o0x1200400a0, C4<0>, C4<0>, C4<0>;
+L_0x11c71c600 .functor OR 1, o0x120040010, o0x120040040, L_0x11c71c6c0, o0x1200400a0;
+L_0x11c71c6c0 .functor NOT 1, o0x120040070, C4<0>, C4<0>, C4<0>;
+L_0x11c71c7a0 .functor OR 1, L_0x11c71c4d0, o0x120040040, o0x120040070, o0x1200400a0;
+L_0x11c71c4d0 .functor NOT 1, o0x120040010, C4<0>, C4<0>, C4<0>;
+L_0x11c71ca40 .functor OR 1, L_0x11c71cab0, o0x120040040, L_0x11c71cbb0, o0x1200400a0;
+L_0x11c71cab0 .functor NOT 1, o0x120040010, C4<0>, C4<0>, C4<0>;
+L_0x11c71cbb0 .functor NOT 1, o0x120040070, C4<0>, C4<0>, C4<0>;
+L_0x11c71cc20 .functor OR 1, L_0x11c71cd40, L_0x11c71cdf0, o0x120040070, o0x1200400a0;
+L_0x11c71cd40 .functor NOT 1, o0x120040010, C4<0>, C4<0>, C4<0>;
+L_0x11c71cdf0 .functor NOT 1, o0x120040040, C4<0>, C4<0>, C4<0>;
+L_0x11c71ced0 .functor OR 1, L_0x11c71cf70, L_0x11c71ce60, L_0x11c71d0e0, o0x1200400a0;
+L_0x11c71cf70 .functor NOT 1, o0x120040010, C4<0>, C4<0>, C4<0>;
+L_0x11c71ce60 .functor NOT 1, o0x120040040, C4<0>, C4<0>, C4<0>;
+L_0x11c71d0e0 .functor NOT 1, o0x120040070, C4<0>, C4<0>, C4<0>;
+L_0x11c71d220/0/0 .functor AND 1, L_0x11c71b8f0, L_0x11c71c3d0, L_0x11c71c600, L_0x11c71c7a0;
+L_0x11c71d220/0/4 .functor AND 1, L_0x11c71ca40, L_0x11c71cc20, L_0x11c71ced0, C4<1>;
+L_0x11c71d220 .functor AND 1, L_0x11c71d220/0/0, L_0x11c71d220/0/4, C4<1>, C4<1>;
+v0x11c705a30_0 .net "A", 0 0, o0x120040010;  0 drivers
+v0x11c71b3a0_0 .net "B", 0 0, o0x120040040;  0 drivers
+v0x11c71b440_0 .net "C", 0 0, o0x120040070;  0 drivers
+v0x11c71b4d0_0 .net "D", 0 0, o0x1200400a0;  0 drivers
+v0x11c71b570_0 .net "F", 0 0, L_0x11c71d220;  1 drivers
+v0x11c71b650_0 .net *"_ivl_0", 0 0, L_0x11c71c550;  1 drivers
+v0x11c71b700_0 .net *"_ivl_10", 0 0, L_0x11c71cd40;  1 drivers
+v0x11c71b7b0_0 .net *"_ivl_12", 0 0, L_0x11c71cdf0;  1 drivers
+v0x11c71b860_0 .net *"_ivl_14", 0 0, L_0x11c71cf70;  1 drivers
+v0x11c71b970_0 .net *"_ivl_16", 0 0, L_0x11c71ce60;  1 drivers
+v0x11c71ba20_0 .net *"_ivl_18", 0 0, L_0x11c71d0e0;  1 drivers
+v0x11c71bad0_0 .net *"_ivl_2", 0 0, L_0x11c71c6c0;  1 drivers
+v0x11c71bb80_0 .net *"_ivl_4", 0 0, L_0x11c71c4d0;  1 drivers
+v0x11c71bc30_0 .net *"_ivl_6", 0 0, L_0x11c71cab0;  1 drivers
+v0x11c71bce0_0 .net *"_ivl_8", 0 0, L_0x11c71cbb0;  1 drivers
+v0x11c71bd90_0 .net "w1", 0 0, L_0x11c71b8f0;  1 drivers
+v0x11c71be30_0 .net "w2", 0 0, L_0x11c71c3d0;  1 drivers
+v0x11c71bfc0_0 .net "w3", 0 0, L_0x11c71c600;  1 drivers
+v0x11c71c050_0 .net "w4", 0 0, L_0x11c71c7a0;  1 drivers
+v0x11c71c0e0_0 .net "w5", 0 0, L_0x11c71ca40;  1 drivers
+v0x11c71c170_0 .net "w6", 0 0, L_0x11c71cc20;  1 drivers
+v0x11c71c210_0 .net "w7", 0 0, L_0x11c71ced0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "MC1.v";
