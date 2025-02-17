@@ -2,7 +2,7 @@
 
 `timescale 1ps/1ps
 
-module RJulianJ(F, A, B, C, D);
+module RJulJ(F, A, B, C, D);
 
     input A,B,C,D;
     output F;
