@@ -1,6 +1,8 @@
+//Name: JULIAN, Jedidiah | Section: S17
+
 `timescale 1ps/1ps
 
-module MC1(F, A, B, C, D);
+module RJulianJ(F, A, B, C, D);
 
     input A,B,C,D;
     output F;
