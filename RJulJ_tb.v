@@ -1,6 +1,6 @@
 //Name: JULIAN, Jedidiah | Section: S17
 
-`timescale 1ps/1ps
+`timescale 1ns/1ps
 
 module RJulJ_tb();
     wire t_F;
