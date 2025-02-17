@@ -14,8 +14,9 @@ module MC1_tb();
 
     initial
         begin
-            $display("Program by JKJulian using Gate-level modelling");
-            $monitor("time = %03d ABDCD=%b F=%b", $time, t_input, t_f);
+            $display("Program by Jedidiah Julian using Gate-level modelling");
+            $display("Boolean Function: F(A,B,C,D) = Product of Maxterm/piM(0,1,2,8,10,12,14)");
+            $monitor("time = %03d ABCD=%b Output=%b", $time, t_input, t_f);
             $dumpfile("MC1.vcd");
             $dumpvars();
         end

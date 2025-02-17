@@ -4,7 +4,7 @@ module MC1(F, A, B, C, D);
 
     input A,B,C,D;
     output F;
-    wire w1,w2,w3,w4, w5, w6, w7;
+    wire w1,w2,w3,w4,w5,w6,w7;
 
     or G1(w1, A, B, C, D);
     or G2(w2, A, B, C, ~D);
