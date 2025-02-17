@@ -7,7 +7,7 @@ module RJulJ(F, A, B, C, D);
     input A,B,C,D;
     output F;
     wire w1,w2,w3,w4,w5,w6,w7;
-    wire A_prime, B_prime, C_prime, D_Prime;
+    wire A_prime, B_prime, C_prime, D_prime;
 
     // Complements
     not G1(A_prime, A);
